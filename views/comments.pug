@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    div(style="background-color:rgba(25,25,35); color:white; padding:25px 100px 25px 100px; text-align:center; max-hight: 100vh")
+      section.w-full.max-w-2xl.px-6.py-4.mx-auto.bg-grey.rounded-md.shadow-md
+        h2.text-3xl.font-semibold.text-center.text-white Comment in the chat below
+        p.mt-3.text-center.text-white 
+        form(method="POST")
+            label.block.mb-2.text-sm.font-medium.text-white Name
+            input.block.w-full.px-4.py-2.text-gray-700.bg-white.border.border-gray-300.rounded-md.g.w-full.mx-2.mt-4(type='text' name='name')
+            label.block.mb-2.text-sm.font-medium.text-white Message
+            textarea.block.w-full.h-40.px-4.py-2.text-gray-700.bg-white.border.border-gray-300.rounded-md.flex.justify-center.mt-6(name='message')
+            button.px-4.py-2.text-white.transition-colors.duration-200.mt-5.transform.bg-gray-700.rounded-md(class='hover:bg-gray-600 focus:outline-none focus:bg-gray-600') Comment
+      div
+        each val in [1,2,3]
+          
